@@ -50,6 +50,10 @@ Route::middleware(['admin'])->prefix('admin')->namespace('admin')->group(static 
 Route::namespace('Front')->group(static function () {
     //    Page
     Route::get('/', 'HomeController@index')->name('home');
+    Route::view('/contact-us', 'front.contact-us')->name('contact');
+    Route::view('/feature', 'front.features')->name('feature');
+    Route::view('/pricing', 'front.pricing')->name('pricing');
+    Route::view('/free-trial', 'front.free-trial')->name('free-trial');
 
     // Route::get('/{slug}', 'PageController@index')->name('page.index');
 });
